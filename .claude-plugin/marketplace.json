@@ -1,0 +1,14 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "cd-usage",
+  "description": "Status line for Claude Code: 5h/7d usage with reset countdowns, tokens in/out, cost and live tokens per second.",
+  "owner": { "name": "Leo" },
+  "plugins": [
+    {
+      "name": "cd-usage",
+      "description": "5h/7d usage, reset countdowns, tokens, cost and live t/s in the status line.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
