@@ -1,6 +1,6 @@
 {
   "name": "cd-usage",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Status line with 5h/7d usage, reset countdowns, tokens, cost and tokens per second",
   "types": "./types/index.d.ts",
   "author": {

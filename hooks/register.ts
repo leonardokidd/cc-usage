@@ -19,6 +19,9 @@ const speed = atom({ plugin: 'cd-usage', key: 'speed' } as const, {
 
 // Space between an icon and its value; a Unicode space, so the app does not collapse it.
 const GAP = '\u2002'
+// ⏳ and ⚡ are drawn about 1/6 em narrower than their box on each side (measured in Apple Color
+// Emoji), so they get a 1/3 em space instead of 1/2 em to look the same as the other icons.
+const GAP_NARROW_ICON = '\u2004'
 // Space between fields. The em space keeps its width in the desktop app (which collapses
 // runs of ASCII spaces); the two ASCII spaces widen it in the terminal, where every space is one cell.
 const SEP = '\u2003  '
@@ -151,12 +154,12 @@ async function pushStatus($: EngineInterface) {
   }
   $.ui.status(
     [
-      `⏱${GAP}${win('five_hour')}`,
+      `⏳${GAP_NARROW_ICON}${win('five_hour')}`,
       `📅${GAP}${win('seven_day')}`,
-      `↑${GAP}${fmt(num(sp.inTok))}`,
-      `↓${GAP}${fmt(out)}`,
-      `$${r1(usd)}`,
-      `⚡${GAP}${r1(tps)} t/s`,
+      `⬆️${GAP}${fmt(num(sp.inTok))}`,
+      `⬇️${GAP}${fmt(out)}`,
+      `💵${GAP}${r1(usd)}`,
+      `⚡${GAP_NARROW_ICON}${r1(tps)} t/s`,
     ].join(SEP),
   )
 }
