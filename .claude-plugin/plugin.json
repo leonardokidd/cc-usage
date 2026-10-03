@@ -6,5 +6,6 @@
   "author": {
     "name": "Leo"
   },
-  "repository": "https://github.com/leonardokidd/cd-usage"
+  "repository": "https://github.com/leonardokidd/cd-usage",
+  "license": "MIT"
 }

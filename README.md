@@ -38,3 +38,7 @@ Requires Claude Code 2.1.286 or newer (function-hook plugins, an early-access fe
 - **Percentages are whole numbers.** Claude Code reports whole points, so they can differ from Settings by 1.
 - **↑ and ↓ cover the main conversation only.** Subagent turns pass through uncounted.
 - **Read-only.** The plugin observes the session and adds one status line; it does not change prompts, tool calls, replies or anything else Claude Code draws.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
