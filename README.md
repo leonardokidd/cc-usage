@@ -3,7 +3,7 @@
 A Claude Code status line showing your plan usage, tokens, cost and live speed. Works in the desktop app's Code tab and the CLI.
 
 ```
-cd-usage  ⏳ 5% 2h 11m   📅 1% 5d 6h   ⬆️ 99.9k   ⬇️ 6.2k   💵 10.6   ⚡ 144.0 t/s
+cd-usage  ⏳ 5% | 2h 11m   📅 1% | 5d 6h   ⬆️ 99.9k   ⬇️ 6.2k   💵 10.6   ⚡ 𝟷𝟺𝟺.𝟶 t/s
 ```
 
 | Field | Meaning |
@@ -13,7 +13,7 @@ cd-usage  ⏳ 5% 2h 11m   📅 1% 5d 6h   ⬆️ 99.9k   ⬇️ 6.2k   💵 10.6
 | ⬆️ | Input tokens sent this session (fresh input plus prompt-cache reads and writes, summed over every request) |
 | ⬇️ | Output tokens this session; counts up live while Claude replies |
 | 💵 | Session cost in US dollars |
-| ⚡ | Output tokens per second; live while Claude replies, then the exact figure for the last reply |
+| ⚡ | Output tokens per second; live while Claude replies, then the exact figure for the last reply. Fixed width (monospace digits) so the line does not shift as it updates |
 
 ## Install
 

@@ -25,6 +25,12 @@ const GAP_NARROW_ICON = '\u2004'
 // Space between fields. The em space keeps its width in the desktop app (which collapses
 // runs of ASCII spaces); the two ASCII spaces widen it in the terminal, where every space is one cell.
 const SEP = '\u2003  '
+// Pads t/s on the left with figure spaces (each as wide as a digit), so its changing value keeps
+// one width and the right-aligned line stops shifting while Claude replies.
+const pad = (s: string, width: number) => s.padStart(width, '\u2007')
+// The desktop font's digits differ in width (a 1 is narrower than an 8), so t/s uses the Unicode
+// monospace digits, which are all exactly one figure space wide.
+const monoDigits = (s: string) => s.replace(/[0-9]/g, d => String.fromCodePoint(0x1d7f6 + Number(d)))
 const num = (x: unknown) => (typeof x === 'number' && Number.isFinite(x) ? x : 0)
 // One decimal, halves rounded up (10.55 -> 10.6); the epsilon absorbs float error such as 10.549999.
 const r1 = (n: number) => (Math.round(n * 10 + 1e-9) / 10).toFixed(1)
@@ -150,7 +156,7 @@ async function pushStatus($: EngineInterface) {
   const out = num(sp.outTok) + (isLive ? num(sp.liveOut) : 0)
   const win = (kind: string) => {
     const l = ls.find(x => x?.kind === kind)
-    return `${l ? Math.round(num(l.percentUsed)) + '%' : '--'} ${left(l?.resetsAt, t)}`
+    return `${l ? Math.round(num(l.percentUsed)) + '%' : '--'} | ${left(l?.resetsAt, t)}`
   }
   $.ui.status(
     [
@@ -159,7 +165,7 @@ async function pushStatus($: EngineInterface) {
       `⬆️${GAP}${fmt(num(sp.inTok))}`,
       `⬇️${GAP}${fmt(out)}`,
       `💵${GAP}${r1(usd)}`,
-      `⚡${GAP_NARROW_ICON}${r1(tps)} t/s`,
+      `⚡${GAP_NARROW_ICON}${monoDigits(pad(r1(tps), 5))} t/s`,
     ].join(SEP),
   )
 }
