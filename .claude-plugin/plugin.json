@@ -1,11 +1,11 @@
 {
-  "name": "cd-usage",
-  "version": "0.2.0",
+  "name": "cc-usage",
+  "version": "0.2.1",
   "description": "Status line with 5h/7d usage, reset countdowns, tokens, cost and tokens per second",
   "types": "./types/index.d.ts",
   "author": {
     "name": "Leo"
   },
-  "repository": "https://github.com/leonardokidd/cd-usage",
+  "repository": "https://github.com/leonardokidd/cc-usage",
   "license": "MIT"
 }

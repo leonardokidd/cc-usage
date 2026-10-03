@@ -11,6 +11,6 @@ export type Speed = {
 
 declare module 'claude-code' {
   interface PluginState {
-    'cd-usage': { limits: Limit[]; speed: Speed; now: number; cost: number; isHidden: boolean }
+    'cc-usage': { limits: Limit[]; speed: Speed; now: number; cost: number; isHidden: boolean }
   }
 }

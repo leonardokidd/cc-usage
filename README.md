@@ -1,9 +1,9 @@
-# cd-usage
+# cc-usage
 
 A Claude Code status line showing your plan usage, tokens, cost and live speed. Works in the desktop app's Code tab and the CLI.
 
 ```
-cd-usage  ⏳ 5% | 2h 11m   📅 1% | 5d 6h   ⬆️ 99.9k   ⬇️ 6.2k   💵 10.6   ⚡ 𝟷𝟺𝟺.𝟶 t/s
+cc-usage  ⏳ 5% | 2h 11m   📅 1% | 5d 6h   ⬆️ 99.9k   ⬇️ 6.2k   💵 10.6   ⚡ 𝟷𝟺𝟺.𝟶 t/s
 ```
 
 | Field | Meaning |
@@ -20,8 +20,8 @@ cd-usage  ⏳ 5% | 2h 11m   📅 1% | 5d 6h   ⬆️ 99.9k   ⬇️ 6.2k   💵 
 In Claude Code:
 
 ```
-/plugin marketplace add leonardokidd/cd-usage
-/plugin install cd-usage@cd-usage
+/plugin marketplace add leonardokidd/cc-usage
+/plugin install cc-usage@cc-usage
 ```
 
 Requires Claude Code 2.1.286 or newer (function-hook plugins, an early-access feature that may change between releases).

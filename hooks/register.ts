@@ -3,11 +3,11 @@ import type { EngineInterface, Register } from 'claude-code'
 
 import type { Limit, Speed } from '../types'
 
-const limits = atom({ plugin: 'cd-usage', key: 'limits' } as const, [] as Limit[])
-const now = atom({ plugin: 'cd-usage', key: 'now' } as const, 0)
-const cost = atom({ plugin: 'cd-usage', key: 'cost' } as const, 0)
-const isHidden = atom({ plugin: 'cd-usage', key: 'isHidden' } as const, false)
-const speed = atom({ plugin: 'cd-usage', key: 'speed' } as const, {
+const limits = atom({ plugin: 'cc-usage', key: 'limits' } as const, [] as Limit[])
+const now = atom({ plugin: 'cc-usage', key: 'now' } as const, 0)
+const cost = atom({ plugin: 'cc-usage', key: 'cost' } as const, 0)
+const isHidden = atom({ plugin: 'cc-usage', key: 'isHidden' } as const, false)
+const speed = atom({ plugin: 'cc-usage', key: 'speed' } as const, {
   inTok: 0,
   outTok: 0,
   cacheTok: 0,
