@@ -1,6 +1,6 @@
 {
   "name": "cc-usage",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Status line with 5h/7d usage, reset countdowns, tokens, cost and tokens per second",
   "types": "./types/index.d.ts",
   "author": {
